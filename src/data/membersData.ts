@@ -1,5 +1,20 @@
 import { HikerProfile } from '../types';
 
+// 82 completed spots for North: Taipei (12), New Taipei (29), Taoyuan (13), Hsinchu City (3), Hsinchu County (13), Yilan (12)
+export const NORTH_82_COMPLETED_IDS: number[] = [
+  ...Array.from({ length: 12 }, (_, i) => i + 39),   // 39-50: 宜蘭縣 (12)
+  ...Array.from({ length: 12 }, (_, i) => i + 149),  // 149-160: 台北市 (12)
+  ...Array.from({ length: 29 }, (_, i) => i + 161),  // 161-189: 新北市 (29)
+  ...Array.from({ length: 13 }, (_, i) => i + 190),  // 190-202: 桃園市 (13)
+  ...Array.from({ length: 3 }, (_, i) => i + 216),   // 216-218: 新竹市 (3)
+  ...Array.from({ length: 13 }, (_, i) => i + 219),  // 219-231: 新竹縣 (13)
+];
+
+// 366 completed spots: All 368 districts except Taitung Green Island (id: 61) & Lanyu (id: 62)
+export const WENHUA_366_COMPLETED_IDS: number[] = Array.from({ length: 368 }, (_, i) => i + 1).filter(
+  (id) => id !== 61 && id !== 62
+);
+
 // Exact 299 completed spots for 299-level challenge explorers (368 total - 69 deep mountain/outer islets)
 export const HERMANN_299_COMPLETED_IDS: number[] = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 38,
@@ -24,13 +39,13 @@ export const HERMANN_299_COMPLETED_IDS: number[] = [
 
 export const HIKER_ROSTER: HikerProfile[] = [
   {
-    nickname: '文華',
-    email: 'hermannhuang@gmail.com',
-    levelTitle: '台灣采風環島探索達人',
-    certId: 'TW-WENHUA-2026-299',
+    nickname: 'WenHua',
+    email: 'wenhua@gmail.com',
+    levelTitle: '台灣鄉鎮區準全制霸達人（366區）',
+    certId: 'TW-WENHUA-2026-366',
     finishDate: '2026-08-18',
-    motto: '走遍雙北基隆、桃竹苗客庄、中彰投雲、南台灣嘉南高屏、宜花東山海與璀璨離島，記錄台灣最美的風情。',
-    completedPeakIds: [...HERMANN_299_COMPLETED_IDS]
+    motto: '走遍全台366個鄉鎮區，已探訪本島各縣市與澎金馬璀璨離島，僅剩台東綠島與蘭嶼兩地即達完全制霸！',
+    completedPeakIds: [...WENHUA_366_COMPLETED_IDS]
   },
   {
     nickname: '如娟',
@@ -43,7 +58,7 @@ export const HIKER_ROSTER: HikerProfile[] = [
   },
   {
     nickname: 'Hermann',
-    email: 'hermanntalk@gmail.com',
+    email: 'hermann@gmail.com',
     levelTitle: '台灣采風環島探索達人',
     certId: 'TW-HERMANN-2026-299',
     finishDate: '2026-08-18',
@@ -51,8 +66,8 @@ export const HIKER_ROSTER: HikerProfile[] = [
     completedPeakIds: [...HERMANN_299_COMPLETED_IDS]
   },
   {
-    nickname: 'Joyease',
-    email: 'joyease@gmail.com',
+    nickname: '走頭透',
+    email: 'all@gmail.com',
     levelTitle: '台灣鄉鎮區景點大滿貫達人',
     certId: 'TW-JOY-2026-001',
     finishDate: '2026-06-18',
@@ -60,13 +75,13 @@ export const HIKER_ROSTER: HikerProfile[] = [
     completedPeakIds: Array.from({ length: 368 }, (_, i) => i + 1) // 368/368 全完登!
   },
   {
-    nickname: '小林隊長',
-    email: 'lin.captain@gmail.com',
-    levelTitle: '台灣鄉鎮區景點大滿貫達人',
-    certId: 'TW-ALLDIST-2026-008',
+    nickname: 'North',
+    email: 'north@gmail.com',
+    levelTitle: '台北人',
+    certId: 'TW-NORTH-2026-082',
     finishDate: '2026-05-20',
-    motto: '一步一腳印，用雙腳丈量台灣都會、鄉間與外島的美麗風景與歷史。',
-    completedPeakIds: Array.from({ length: 368 }, (_, i) => i + 1) // 368/368
+    motto: '我只愛臺北，只到桃竹。',
+    completedPeakIds: [...NORTH_82_COMPLETED_IDS] // 82/368 (雙北、桃園、新竹、宜蘭)
   },
   {
     nickname: '阿吉領隊',
