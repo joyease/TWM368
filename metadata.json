@@ -1,0 +1,8 @@
+{
+  "name": "台灣368景點與獎狀",
+  "description": "輸入山友gmail查詢368鄉鎮區景點打卡紀錄、展示精美完獎狀、台灣地圖點位與景點名稱高亮清單",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
